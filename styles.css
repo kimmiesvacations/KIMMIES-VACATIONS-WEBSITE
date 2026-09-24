@@ -99,3 +99,38 @@ input,textarea{width:100%;border:1px solid #ddd1df;border-radius:12px;padding:12
   .footer{grid-template-columns:1fr}
   .copyright{grid-column:auto}
 }
+.cards.two{grid-template-columns:repeat(2,minmax(0,1fr))}
+.traveler-forms-section{background:linear-gradient(120deg,#fbf7fd,#f2f7e8)}
+.form-cards{max-width:980px}
+.form-card{background:white;border-radius:24px;padding:32px;box-shadow:var(--shadow);border:1px solid rgba(109,44,145,.08)}
+.form-card h3{font-size:1.45rem;color:var(--deep-purple);margin:10px 0 8px}
+.form-card-icon{font-size:2.3rem}
+.secure-card{border-top:5px solid var(--green)}
+.soft-button{background:#eef6dc;color:var(--deep-purple);border:1px solid rgba(110,165,58,.35)}
+.application-page{min-height:100vh;background:linear-gradient(180deg,#fffaf2,#f7f0fa)}
+.application-shell{max-width:1050px;margin:0 auto;padding:48px 20px 80px}
+.application-intro{background:linear-gradient(135deg,#6d2c91,#7f4d9c 55%,#6ea53a);color:white;border-radius:28px;padding:34px;margin-bottom:28px}
+.application-intro h1{font-family:Georgia,serif;font-size:clamp(2.4rem,6vw,4.2rem);line-height:1.05;margin:0 0 10px}
+.application-intro p{max-width:760px;margin:0}
+.application-card{background:white;border-radius:26px;padding:30px;box-shadow:var(--shadow);margin-bottom:24px}
+.application-card h2{font-family:Georgia,serif;color:var(--deep-purple);font-size:2rem;margin:0 0 18px}
+.application-form-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.application-form-grid label{display:flex;flex-direction:column;gap:7px;font-weight:800;color:var(--deep-purple);font-size:.92rem}
+.application-form-grid .full{grid-column:1/-1}
+.application-form-grid select{width:100%;border:1px solid #ddd1df;border-radius:12px;padding:12px 13px;font:inherit;background:#fff;color:var(--ink)}
+.application-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:20px}
+.security-note{background:#eef6dc;border-left:5px solid var(--green);padding:16px 18px;border-radius:14px;color:var(--deep-purple);font-weight:700}
+.back-home{display:inline-flex;align-items:center;gap:8px;margin-bottom:18px;text-decoration:none;color:var(--purple);font-weight:800}
+@media(max-width:900px){
+  .cards.two{grid-template-columns:1fr}
+}
+@media(max-width:620px){
+  .application-form-grid{grid-template-columns:1fr}
+  .application-form-grid .full{grid-column:auto}
+}
+@media print{
+  .site-header,.footer,.application-actions,.back-home{display:none!important}
+  .application-shell{padding:0}
+  .application-intro{background:white!important;color:var(--ink)!important;border:2px solid #ddd}
+  .application-card{box-shadow:none;border:1px solid #ddd}
+}
