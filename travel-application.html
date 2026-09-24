@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Travel Application | Kimmie's Vacations</title>
+  <meta name="description" content="Kimmie's Vacations traveler application.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="application-page">
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Kimmie's Vacations home">
+      <span class="brand-mark">KV</span>
+      <span>Kimmie's Vacations</span>
+    </a>
+    <a class="button primary" href="index.html">Back to Website</a>
+  </header>
+
+  <main class="application-shell">
+    <a class="back-home" href="index.html#traveler-forms">← Back to Traveler Forms</a>
+
+    <section class="application-intro">
+      <p class="eyebrow light">KIMMIE'S VACATIONS</p>
+      <h1>Travel Application</h1>
+      <p>Complete the traveler information below. You can print or save the completed application as a PDF. This page does not collect or store credit-card information.</p>
+    </section>
+
+    <form id="travelApplication">
+      <section class="application-card">
+        <h2>Trip Information</h2>
+        <div class="application-form-grid">
+          <label>Destination or Cruise
+            <input type="text" name="trip">
+          </label>
+          <label>Travel Dates
+            <input type="text" name="travelDates" placeholder="Example: June 11–15, 2027">
+          </label>
+        </div>
+      </section>
+
+      <section class="application-card">
+        <h2>Guest 1</h2>
+        <div class="application-form-grid">
+          <label class="full">Full Name
+            <input type="text" name="guest1Name" required>
+          </label>
+          <label class="full">Address
+            <input type="text" name="guest1Address">
+          </label>
+          <label>City
+            <input type="text" name="guest1City">
+          </label>
+          <label>State
+            <input type="text" name="guest1State">
+          </label>
+          <label>Phone
+            <input type="tel" name="guest1Phone">
+          </label>
+          <label>Email
+            <input type="email" name="guest1Email">
+          </label>
+          <label>Date of Birth
+            <input type="date" name="guest1Dob">
+          </label>
+          <label>Travel Insurance
+            <select name="guest1Insurance">
+              <option value="">Select</option>
+              <option>Accept</option>
+              <option>Decline</option>
+            </select>
+          </label>
+        </div>
+      </section>
+
+      <section class="application-card">
+        <h2>Guest 2</h2>
+        <div class="application-form-grid">
+          <label class="full">Full Name
+            <input type="text" name="guest2Name">
+          </label>
+          <label class="full">Address
+            <input type="text" name="guest2Address">
+          </label>
+          <label>City
+            <input type="text" name="guest2City">
+          </label>
+          <label>State
+            <input type="text" name="guest2State">
+          </label>
+          <label>Phone
+            <input type="tel" name="guest2Phone">
+          </label>
+          <label>Email
+            <input type="email" name="guest2Email">
+          </label>
+          <label>Date of Birth
+            <input type="date" name="guest2Dob">
+          </label>
+          <label>Travel Insurance
+            <select name="guest2Insurance">
+              <option value="">Select</option>
+              <option>Accept</option>
+              <option>Decline</option>
+            </select>
+          </label>
+        </div>
+      </section>
+
+      <section class="application-card">
+        <h2>Notes or Special Requests</h2>
+        <div class="application-form-grid">
+          <label class="full">Anything Kimmie's Vacations should know?
+            <textarea name="notes" rows="5" placeholder="Celebration, room requests, mobility needs, preferred departure airport, etc."></textarea>
+          </label>
+        </div>
+
+        <div class="security-note">
+          For your security, do not enter a credit-card number, expiration date, or CVV anywhere on this travel application. Card authorization will be handled through a separate secure payment link.
+        </div>
+
+        <div class="application-actions">
+          <button class="button primary" type="button" id="printApplication">Print / Save as PDF</button>
+          <a class="button soft-button" href="index.html#contact">Contact Kimmie's Vacations</a>
+        </div>
+      </section>
+    </form>
+  </main>
+
+  <footer class="footer">
+    <div>
+      <strong>Kimmie's Vacations</strong>
+      <p>No Hesitation — Let's Vacation</p>
+    </div>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="index.html#contact">Contact</a>
+    </div>
+    <p class="copyright">© <span id="year"></span> Kimmie's Vacations. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
