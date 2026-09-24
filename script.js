@@ -9,7 +9,8 @@ document.querySelectorAll('.nav a').forEach(link => {
   link.addEventListener('click', () => nav.classList.remove('open'));
 });
 
-document.getElementById('year').textContent = new Date().getFullYear();
+const yearEl = document.getElementById('year');
+if (yearEl) yearEl.textContent = new Date().getFullYear();
 
 const audio = document.getElementById('caribbeanAudio');
 const musicButton = document.getElementById('musicButton');
@@ -39,4 +40,9 @@ form?.addEventListener('submit', (event) => {
   event.preventDefault();
   document.getElementById('formMessage').textContent =
     'Your quote form is ready. Next, we’ll connect it to your business email so submissions can be sent to you.';
+});
+
+const printApplicationButton = document.getElementById('printApplication');
+printApplicationButton?.addEventListener('click', () => {
+  window.print();
 });
