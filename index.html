@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kimmie's Vacations</title>
+  <meta name="description" content="Kimmie's Vacations — cruises, all-inclusive resorts, group trips, vacation deals, and custom getaways.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="Kimmie's Vacations home">
+      <span class="brand-mark">KV</span>
+      <span>Kimmie's Vacations</span>
+    </a>
+    <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">☰</button>
+    <nav class="nav" aria-label="Main navigation">
+      <a href="#cruises">Cruises</a>
+      <a href="#resorts">Resorts</a>
+      <a href="#groups">Group Trips</a>
+      <a href="#deals">Deals</a>
+      <a href="#book">Book Now</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <p class="eyebrow">CRUISES • RESORTS • GROUP TRAVEL</p>
+        <h1>Your next vacation starts here.</h1>
+        <p class="hero-copy">From Caribbean cruises to all-inclusive escapes, Kimmie's Vacations helps you plan the getaway you've been waiting for.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#book">Book Your Vacation</a>
+          <a class="button secondary" href="#deals">View Current Trips</a>
+        </div>
+        <button id="musicButton" class="music-button" type="button" aria-pressed="false">♫ Play Caribbean Music</button>
+        <audio id="caribbeanAudio" loop preload="none">
+          <source src="assets/caribbean-music.mp3" type="audio/mpeg">
+        </audio>
+        <p id="musicNote" class="music-note">A licensed or royalty-free track can be added here.</p>
+      </div>
+    </section>
+
+    <section class="intro section">
+      <p class="eyebrow">PLAN • RELAX • ENJOY</p>
+      <h2>Where do you want to go?</h2>
+      <p class="section-lead">Choose your vacation style and we'll help make the planning simple.</p>
+      <div class="cards three">
+        <article class="feature-card tropical-card">
+          <div class="card-icon">🚢</div>
+          <h3>Cruises</h3>
+          <p>Caribbean, Bahamas, Mexico, Alaska, Mediterranean and more.</p>
+          <a href="#cruises">Explore cruises →</a>
+        </article>
+        <article class="feature-card resort-card">
+          <div class="card-icon">🌴</div>
+          <h3>All-Inclusive Resorts</h3>
+          <p>Relax with resort packages for couples, families, friends and groups.</p>
+          <a href="#resorts">Explore resorts →</a>
+        </article>
+        <article class="feature-card group-card">
+          <div class="card-icon">✈️</div>
+          <h3>Group Trips</h3>
+          <p>Celebrate birthdays, reunions, girls' trips and special occasions together.</p>
+          <a href="#groups">Explore group trips →</a>
+        </article>
+      </div>
+    </section>
+
+    <section id="cruises" class="section split-section dark-section">
+      <div>
+        <p class="eyebrow light">SET SAIL</p>
+        <h2>Find your perfect cruise</h2>
+        <p>Browse cruise ideas, featured sailings and group cruise opportunities. Your cruise booking engine can be connected here when you're ready.</p>
+      </div>
+      <div class="action-panel">
+        <span class="panel-icon">🚢</span>
+        <h3>Search Cruises</h3>
+        <p>Booking engine connection coming next.</p>
+        <a class="button primary" href="#contact">Request a Cruise Quote</a>
+      </div>
+    </section>
+
+    <section id="resorts" class="section">
+      <p class="eyebrow">SUN • SAND • RELAXATION</p>
+      <h2>All-Inclusive Resorts</h2>
+      <div class="cards three compact">
+        <article class="destination-card"><span>🇯🇲</span><h3>Jamaica</h3><p>Beachfront resorts, romance and island culture.</p></article>
+        <article class="destination-card"><span>🇩🇴</span><h3>Punta Cana</h3><p>Beautiful beaches and easy all-inclusive escapes.</p></article>
+        <article class="destination-card"><span>🇲🇽</span><h3>Mexico</h3><p>Cancún, Riviera Maya, Los Cabos and more.</p></article>
+      </div>
+    </section>
+
+    <section id="groups" class="section accent-section">
+      <div class="section-heading">
+        <p class="eyebrow">TRAVEL TOGETHER</p>
+        <h2>Group Trips & Celebrations</h2>
+        <p>Planning a birthday trip, family getaway, reunion or friends' vacation? We'll help keep everyone organized.</p>
+      </div>
+      <a class="button primary" href="#contact">Start Planning a Group Trip</a>
+    </section>
+
+    <section id="deals" class="section">
+      <p class="eyebrow">FEATURED VACATIONS</p>
+      <h2>Vacation Deals & Flyers</h2>
+      <p class="section-lead">This section is ready for your flyers. We can add, remove and update them anytime.</p>
+      <div class="flyer-grid">
+        <article class="flyer-placeholder">
+          <div class="flyer-art purple">🌺</div>
+          <h3>Featured Trip</h3>
+          <p>Add your newest vacation flyer here.</p>
+        </article>
+        <article class="flyer-placeholder">
+          <div class="flyer-art green">🏝️</div>
+          <h3>Group Getaway</h3>
+          <p>Add an upcoming group trip flyer here.</p>
+        </article>
+        <article class="flyer-placeholder">
+          <div class="flyer-art sunset">🛳️</div>
+          <h3>Cruise Special</h3>
+          <p>Add a cruise promotion flyer here.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="book" class="section booking-section">
+      <p class="eyebrow light">READY TO GO?</p>
+      <h2>Book Your Vacation</h2>
+      <p>Your travel booking engine can be embedded here, or this button can send clients directly to your existing booking portal.</p>
+      <div class="hero-actions">
+        <a class="button light-button" href="#contact">Request a Quote</a>
+        <a class="button outline-light" href="#contact">Make a Payment</a>
+      </div>
+    </section>
+
+    <section id="reviews" class="section">
+      <p class="eyebrow">HAPPY TRAVELERS</p>
+      <h2>Reviews</h2>
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <p>Client testimonials can be featured here. We can connect the “Leave a Review” button directly to your Google or Facebook review page.</p>
+      </div>
+      <a class="button primary" href="#contact">Leave a Review</a>
+    </section>
+
+    <section id="contact" class="section contact-section">
+      <div>
+        <p class="eyebrow">LET'S PLAN IT</p>
+        <h2>Request a Vacation Quote</h2>
+        <p>Tell us what kind of trip you want. We'll connect this form to your preferred business email or form service next.</p>
+      </div>
+      <form id="quoteForm" class="quote-form">
+        <label>Full name<input type="text" name="name" required></label>
+        <label>Email<input type="email" name="email" required></label>
+        <label>Destination or cruise interest<input type="text" name="destination"></label>
+        <label>Travel dates<input type="text" name="dates" placeholder="Example: June 10–17"></label>
+        <label>Number of travelers<input type="number" name="travelers" min="1" value="2"></label>
+        <label>Tell us about your trip<textarea name="message" rows="4"></textarea></label>
+        <button class="button primary" type="submit">Prepare Quote Request</button>
+        <p id="formMessage" class="form-message" role="status"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div>
+      <strong>Kimmie's Vacations</strong>
+      <p>Cruises • Resorts • Group Travel • Custom Getaways</p>
+    </div>
+    <div class="footer-links">
+      <a href="#book">Book Now</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <p class="copyright">© <span id="year"></span> Kimmie's Vacations. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
