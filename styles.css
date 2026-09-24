@@ -134,3 +134,12 @@ input,textarea{width:100%;border:1px solid #ddd1df;border-radius:12px;padding:12
   .application-intro{background:white!important;color:var(--ink)!important;border:2px solid #ddd}
   .application-card{box-shadow:none;border:1px solid #ddd}
 }
+
+.current-trips-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+.flyer-card{background:white;border-radius:24px;padding:18px;box-shadow:var(--shadow);border:1px solid rgba(109,44,145,.08)}
+.flyer-card a{display:block;border-radius:16px;overflow:hidden;background:#f6f0f7}
+.flyer-card img{display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;object-position:top}
+.flyer-card h3{margin:16px 0 6px;color:var(--deep-purple);font-size:1.3rem}
+.flyer-card p{margin:0;color:var(--muted)}
+.trip-update{display:inline-block;margin-top:12px;padding:7px 11px;border-radius:999px;background:#eef6dc;color:var(--deep-purple);font-size:.82rem;font-weight:800}
+@media(max-width:760px){.current-trips-grid{grid-template-columns:1fr}}
