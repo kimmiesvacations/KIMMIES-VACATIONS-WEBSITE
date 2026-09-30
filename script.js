@@ -21,17 +21,17 @@ musicButton?.addEventListener('click', async () => {
   try {
     if (audio.paused) {
       await audio.play();
-      musicButton.textContent = '❚❚ Pause Caribbean Music';
+      musicButton.textContent = '❚❚ Pause Tropical Music';
       musicButton.setAttribute('aria-pressed', 'true');
       musicNote.textContent = 'Music playing';
     } else {
       audio.pause();
-      musicButton.textContent = '♫ Play Caribbean Music';
+      musicButton.textContent = '♫ Play Tropical Music';
       musicButton.setAttribute('aria-pressed', 'false');
       musicNote.textContent = 'Music paused';
     }
   } catch {
-    musicNote.textContent = 'Add a licensed MP3 file at assets/caribbean-music.mp3 to enable music.';
+    musicNote.textContent = 'The music file is not available yet.';
   }
 });
 
