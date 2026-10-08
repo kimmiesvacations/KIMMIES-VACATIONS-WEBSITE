@@ -113,3 +113,46 @@ if (applicationForm) {
     }
   });
 }
+
+
+// Customer reviews and credit-card authorization requests use separate forms.
+// Only contact/booking information is sent; no payment-card data is collected.
+function attachGuestForm(formId, statusId, messages) {
+  const guestForm = document.getElementById(formId);
+  if (!guestForm) return;
+  guestForm.addEventListener('submit', async (event) => {
+    event.preventDefault();
+    const status = document.getElementById(statusId);
+    const button = guestForm.querySelector('button[type="submit"]');
+    if (!status || !button) return;
+    status.textContent = messages.sending;
+    button.disabled = true;
+    try {
+      const response = await fetch(guestForm.action, {
+        method: 'POST',
+        body: new FormData(guestForm),
+        headers: { Accept: 'application/json' }
+      });
+      if (response.ok) {
+        guestForm.reset();
+        status.textContent = messages.success;
+      } else {
+        status.textContent = messages.failure;
+      }
+    } catch {
+      status.textContent = messages.failure;
+    } finally {
+      button.disabled = false;
+    }
+  });
+}
+attachGuestForm('reviewForm', 'reviewFormMessage', {
+  sending: 'Sending your review…',
+  success: 'Thank you! Your review was sent to Kimmie\'s Vacations for review. It will not be published automatically.',
+  failure: 'Your review could not be sent right now. Please try again in a moment.'
+});
+attachGuestForm('authorizationRequestForm', 'authorizationFormMessage', {
+  sending: 'Sending your request…',
+  success: 'Thank you! Your authorization form request was sent. Kimmie\'s Vacations will follow up with secure instructions.',
+  failure: 'Your request could not be sent right now. Please try again in a moment.'
+});
