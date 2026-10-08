@@ -21,10 +21,12 @@
     <section class="application-intro">
       <p class="eyebrow light">KIMMIE'S VACATIONS</p>
       <h1>Travel Application</h1>
-      <p>Complete the traveler information below. You can print or save the completed application as a PDF. This page does not collect or store credit-card information.</p>
+      <p>Complete the traveler information below. When this page is available securely over HTTPS, you can send your application directly to Kimmie’s Vacations. You can also print or save it as a PDF. This page does not collect credit-card information.</p>
     </section>
 
-    <form id="travelApplication">
+    <form id="travelApplication" action="https://formspree.io/f/mrpeqlrp" method="POST">
+      <input type="hidden" name="formType" value="Travel Application">
+      <p id="applicationSecurityMessage" class="security-note" role="status">Online submissions are temporarily unavailable until HTTPS security is ready. Please do not enter personal details on an unsecured page.</p>
       <section class="application-card">
         <h2>Trip Information</h2>
         <div class="application-form-grid">
@@ -56,7 +58,7 @@
             <input type="tel" name="guest1Phone">
           </label>
           <label>Email
-            <input type="email" name="guest1Email">
+            <input type="email" name="guest1Email" required>
           </label>
           <label>Date of Birth
             <input type="date" name="guest1Dob">
@@ -109,18 +111,20 @@
         <h2>Notes or Special Requests</h2>
         <div class="application-form-grid">
           <label class="full">Anything Kimmie's Vacations should know?
-            <textarea name="notes" rows="5" placeholder="Celebration, room requests, mobility needs, preferred departure airport, etc."></textarea>
+            <textarea name="notes" rows="5" placeholder="Celebration, room requests, preferred departure airport, etc. (Do not include medical details.)"></textarea>
           </label>
         </div>
 
         <div class="security-note">
-          For your security, do not enter a credit-card number, expiration date, or CVV anywhere on this travel application. Card authorization will be handled through a separate secure payment link.
+          For your security, do not enter a credit-card number, expiration date, CVV, passport number, or Social Security number anywhere on this travel application. Card authorization will be handled through a separate secure payment link.
         </div>
 
         <div class="application-actions">
-          <button class="button primary" type="button" id="printApplication">Print / Save as PDF</button>
+          <button class="button primary" type="submit" id="submitApplication" disabled>Submit Application</button>
+          <button class="button soft-button" type="button" id="printApplication">Print / Save as PDF</button>
           <a class="button soft-button" href="index.html#contact">Contact Kimmie's Vacations</a>
         </div>
+        <p id="applicationFormMessage" class="form-message" role="status" aria-live="polite"></p>
       </section>
     </form>
   </main>
