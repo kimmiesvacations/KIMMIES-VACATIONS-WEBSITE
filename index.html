@@ -187,14 +187,44 @@
       </div>
     </section>
 
-    <section id="reviews" class="section">
+    <section id="reviews" class="section review-section">
       <p class="eyebrow">HAPPY TRAVELERS</p>
-      <h2>Reviews</h2>
-      <div class="review-card">
-        <div class="stars">★★★★★</div>
-        <p>Client testimonials can be featured here. We can connect the “Leave a Review” button directly to your Google or Facebook review page.</p>
+      <h2>Share Your Travel Experience</h2>
+      <p class="section-lead">Have you traveled with Kimmie's Vacations? We would love to hear about your trip!</p>
+      <a class="button primary" href="#leave-review">Leave a Review</a>
+      <div id="leave-review" class="review-card review-form-card">
+        <h3>Tell us how we did</h3>
+        <p>Your review goes directly to Kimmie's Vacations. It won't be published automatically.</p>
+        <form id="reviewForm" class="review-form" action="https://formspree.io/f/mrpeqlrp" method="POST">
+          <input type="hidden" name="_subject" value="New Kimmie's Vacations Website Review">
+          <input type="hidden" name="submission_type" value="Customer Review">
+          <label>Your name
+            <input type="text" name="name" autocomplete="name" required>
+          </label>
+          <label>Your email (for follow-up; not displayed)
+            <input type="email" name="email" autocomplete="email" required>
+          </label>
+          <label>How was your experience?
+            <select name="rating" required>
+              <option value="" disabled selected>Select a rating</option>
+              <option value="5 stars">★★★★★ — Excellent</option>
+              <option value="4 stars">★★★★ — Very good</option>
+              <option value="3 stars">★★★ — Good</option>
+              <option value="2 stars">★★ — Fair</option>
+              <option value="1 star">★ — Needs improvement</option>
+            </select>
+          </label>
+          <label>Your review
+            <textarea name="message" rows="5" required placeholder="Tell us about your vacation and your experience with Kimmie's Vacations"></textarea>
+          </label>
+          <label class="review-consent">
+            <input type="checkbox" name="permission_to_share" value="yes">
+            Kimmie's Vacations may share my review publicly.
+          </label>
+          <button class="button primary" type="submit">Submit My Review</button>
+          <p id="reviewFormMessage" class="form-message" role="status" aria-live="polite"></p>
+        </form>
       </div>
-      <a class="button primary" href="#contact">Leave a Review</a>
     </section>
 
     <section id="contact" class="section contact-section">
