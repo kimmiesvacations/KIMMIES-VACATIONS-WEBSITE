@@ -201,16 +201,16 @@
       <div>
         <p class="eyebrow">LET'S PLAN IT</p>
         <h2>Request a Vacation Quote</h2>
-        <p>Tell us what kind of trip you want. We'll connect this form to your preferred business email or form service next.</p>
+        <p>Tell us about your trip and send your request directly to Kimmie's Vacations. We'll follow up with vacation options and pricing.</p>
       </div>
-      <form id="quoteForm" class="quote-form">
+      <form id="quoteForm" class="quote-form" action="https://formspree.io/f/mrpeqlrp" method="POST">
         <label>Full name<input type="text" name="name" required></label>
         <label>Email<input type="email" name="email" required></label>
         <label>Destination or cruise interest<input type="text" name="destination"></label>
         <label>Travel dates<input type="text" name="dates" placeholder="Example: June 10–17"></label>
         <label>Number of travelers<input type="number" name="travelers" min="1" value="2"></label>
         <label>Tell us about your trip<textarea name="message" rows="4"></textarea></label>
-        <button class="button primary" type="submit">Prepare Quote Request</button>
+        <button class="button primary" type="submit">Send Quote Request</button>
         <p id="formMessage" class="form-message" role="status"></p>
       </form>
     </section>
