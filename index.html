@@ -180,10 +180,39 @@
         </article>
         <article class="form-card secure-card">
           <div class="form-card-icon">🔒</div>
-          <h3>Secure Card Authorization</h3>
-          <p>Card information should be entered only through a secure payment provider. We’ll connect this button to your secure authorization or payment page.</p>
-          <a class="button soft-button" href="#contact">Request Secure Payment Link</a>
+          <h3>Secure Payments &amp; Authorization</h3>
+          <p>Make a secure payment through Square, or request a separate credit card authorization form. Please never enter card details into a regular website form.</p>
+          <div class="form-actions">
+            <a class="button primary" href="https://square.link/u/dskHgtJ4" target="_blank" rel="noopener noreferrer">Make a Secure Payment</a>
+            <a class="button soft-button" href="#authorization-request">Request Authorization Form</a>
+          </div>
         </article>
+      </div>
+    </section>
+
+    <section id="authorization-request" class="section authorization-request-section">
+      <p class="eyebrow">SAFE &amp; SECURE</p>
+      <h2>Request a Credit Card Authorization Form</h2>
+      <p class="section-lead">Need to authorize a travel payment? Enter your contact information below and we'll follow up with secure instructions. <strong>Do not enter card numbers, expiration dates or security codes here.</strong></p>
+      <div class="review-card authorization-request-card">
+        <form id="authorizationRequestForm" class="review-form" action="https://formspree.io/f/mrpeqlrp" method="POST">
+          <input type="hidden" name="_subject" value="New Kimmie's Vacations Card Authorization Request">
+          <input type="hidden" name="submission_type" value="Credit Card Authorization Form Request">
+          <label>Full name
+            <input type="text" name="name" autocomplete="name" required>
+          </label>
+          <label>Email address
+            <input type="email" name="email" autocomplete="email" required>
+          </label>
+          <label>Booking or confirmation number (optional)
+            <input type="text" name="booking_reference" autocomplete="off">
+          </label>
+          <label>Message (optional — no credit card details)
+            <textarea name="message" rows="3" placeholder="How can we help with your authorization form?"></textarea>
+          </label>
+          <button class="button primary" type="submit">Request My Authorization Form</button>
+          <p id="authorizationFormMessage" class="form-message" role="status" aria-live="polite"></p>
+        </form>
       </div>
     </section>
 
