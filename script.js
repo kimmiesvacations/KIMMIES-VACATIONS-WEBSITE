@@ -69,3 +69,47 @@ const printApplicationButton = document.getElementById('printApplication');
 printApplicationButton?.addEventListener('click', () => {
   window.print();
 });
+
+const applicationForm = document.getElementById('travelApplication');
+if (applicationForm) {
+  const submitApplication = document.getElementById('submitApplication');
+  const securityMessage = document.getElementById('applicationSecurityMessage');
+  const applicationStatus = document.getElementById('applicationFormMessage');
+  const applicationIsSecure = window.location.protocol === 'https:';
+
+  if (applicationIsSecure && submitApplication) {
+    submitApplication.disabled = false;
+    if (securityMessage) securityMessage.hidden = true;
+  }
+
+  applicationForm.addEventListener('submit', async (event) => {
+    event.preventDefault();
+
+    if (!applicationIsSecure || !submitApplication || !applicationStatus) {
+      if (applicationStatus) applicationStatus.textContent = 'Please return when the website is secured with HTTPS before submitting personal information.';
+      return;
+    }
+
+    applicationStatus.textContent = 'Sending your travel application…';
+    submitApplication.disabled = true;
+
+    try {
+      const response = await fetch(applicationForm.action, {
+        method: 'POST',
+        body: new FormData(applicationForm),
+        headers: { Accept: 'application/json' }
+      });
+
+      if (response.ok) {
+        applicationForm.reset();
+        applicationStatus.textContent = "Thank you! Your travel application was submitted successfully to Kimmie's Vacations. We'll be in touch soon.";
+      } else {
+        applicationStatus.textContent = 'Your application could not be sent. Please try again, or contact Kimmie’s Vacations.';
+      }
+    } catch {
+      applicationStatus.textContent = 'Unable to send your application. Please check your connection and try again.';
+    } finally {
+      submitApplication.disabled = false;
+    }
+  });
+}
