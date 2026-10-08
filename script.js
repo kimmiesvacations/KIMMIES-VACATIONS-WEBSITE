@@ -36,10 +36,33 @@ musicButton?.addEventListener('click', async () => {
 });
 
 const form = document.getElementById('quoteForm');
-form?.addEventListener('submit', (event) => {
+form?.addEventListener('submit', async (event) => {
   event.preventDefault();
-  document.getElementById('formMessage').textContent =
-    'Your quote form is ready. Next, we’ll connect it to your business email so submissions can be sent to you.';
+  const status = document.getElementById('formMessage');
+  const submitButton = form.querySelector('button[type="submit"]');
+  if (!status || !submitButton) return;
+
+  status.textContent = 'Sending your quote request…';
+  submitButton.disabled = true;
+
+  try {
+    const response = await fetch(form.action, {
+      method: 'POST',
+      body: new FormData(form),
+      headers: { Accept: 'application/json' }
+    });
+
+    if (response.ok) {
+      form.reset();
+      status.textContent = "Thank you! Your vacation quote request has been sent. We'll be in touch soon.";
+    } else {
+      status.textContent = 'Your request could not be sent. Please try again in a moment.';
+    }
+  } catch {
+    status.textContent = 'Unable to send your request. Please check your connection and try again.';
+  } finally {
+    submitButton.disabled = false;
+  }
 });
 
 const printApplicationButton = document.getElementById('printApplication');
