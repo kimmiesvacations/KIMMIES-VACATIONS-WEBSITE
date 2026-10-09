@@ -185,3 +185,16 @@ input,textarea{width:100%;border:1px solid #ddd1df;border-radius:12px;padding:12
   .form-actions{flex-direction:column}
   .form-actions .button{width:100%}
 }
+
+/* Facebook customer recommendations */
+.facebook-reviews-highlight{display:flex;align-items:center;gap:22px;flex-wrap:wrap;margin:28px 0 22px;padding:28px;border:1px solid rgba(109,44,145,.12);border-radius:24px;background:linear-gradient(110deg,#f8f0fb 0%,#f5faed 100%);box-shadow:0 10px 30px rgba(53,20,79,.06)}
+.facebook-reviews-icon{display:grid;place-items:center;flex:0 0 52px;width:52px;height:52px;color:var(--purple)}
+.facebook-reviews-icon svg{display:block;width:52px;height:52px}
+.facebook-reviews-copy{flex:1 1 310px;min-width:0}
+.facebook-reviews-kicker{margin:0 0 5px;color:var(--purple);font-size:.78rem;letter-spacing:.11em;font-weight:800}
+.facebook-reviews-copy h3{margin:0 0 6px;color:var(--deep-purple);font-size:clamp(1.3rem,2.6vw,1.7rem);line-height:1.25}
+.facebook-reviews-copy h3 span{font-size:.85em;font-weight:600;color:var(--green)}
+.facebook-reviews-copy>p:last-child{margin:0;color:var(--muted);font-size:.92rem}
+.facebook-reviews-button{flex-shrink:0;text-align:center}
+.review-invite{margin:22px 0 12px}
+@media(max-width:620px){.facebook-reviews-highlight{padding:22px;gap:15px}.facebook-reviews-button{width:100%}}
