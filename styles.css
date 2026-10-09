@@ -84,6 +84,10 @@ input,textarea{width:100%;border:1px solid #ddd1df;border-radius:12px;padding:12
 .footer p{margin:.4rem 0;color:#f2e8f7}
 .footer-links{display:flex;gap:18px;flex-wrap:wrap}
 .footer-links a{text-decoration:none;font-weight:800}
+.facebook-link{display:inline-flex;align-items:center;gap:10px;width:max-content;max-width:100%;margin-top:12px;padding:8px 15px 8px 9px;border:1px solid rgba(255,255,255,.42);border-radius:999px;background:rgba(255,255,255,.12);color:#fff;text-decoration:none;font-weight:800;transition:background .2s ease,transform .2s ease}
+.facebook-link svg{width:27px;height:27px;flex-shrink:0}
+.facebook-link:hover,.facebook-link:focus-visible{background:rgba(255,255,255,.24);transform:translateY(-1px)}
+.facebook-link:focus-visible{outline:2px solid white;outline-offset:3px}
 .copyright{grid-column:1/-1;border-top:1px solid rgba(255,255,255,.22);padding-top:18px}
 @media(max-width:900px){
   .menu-toggle{display:block}
