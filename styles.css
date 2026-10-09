@@ -85,7 +85,7 @@ input,textarea{width:100%;border:1px solid #ddd1df;border-radius:12px;padding:12
 .footer-links{display:flex;gap:18px;flex-wrap:wrap}
 .footer-links a{text-decoration:none;font-weight:800}
 .facebook-link{display:inline-flex;align-items:center;gap:10px;width:max-content;max-width:100%;margin-top:12px;padding:8px 15px 8px 9px;border:1px solid rgba(255,255,255,.42);border-radius:999px;background:rgba(255,255,255,.12);color:#fff;text-decoration:none;font-weight:800;transition:background .2s ease,transform .2s ease}
-.facebook-link svg{width:27px;height:27px;flex-shrink:0}
+.facebook-link svg{width:22px;height:22px;flex-shrink:0}
 .facebook-link:hover,.facebook-link:focus-visible{background:rgba(255,255,255,.24);transform:translateY(-1px)}
 .facebook-link:focus-visible{outline:2px solid white;outline-offset:3px}
 .copyright{grid-column:1/-1;border-top:1px solid rgba(255,255,255,.22);padding-top:18px}
@@ -188,8 +188,8 @@ input,textarea{width:100%;border:1px solid #ddd1df;border-radius:12px;padding:12
 
 /* Facebook customer recommendations */
 .facebook-reviews-highlight{display:flex;align-items:center;gap:22px;flex-wrap:wrap;margin:28px 0 22px;padding:28px;border:1px solid rgba(109,44,145,.12);border-radius:24px;background:linear-gradient(110deg,#f8f0fb 0%,#f5faed 100%);box-shadow:0 10px 30px rgba(53,20,79,.06)}
-.facebook-reviews-icon{display:grid;place-items:center;flex:0 0 52px;width:52px;height:52px;color:var(--purple)}
-.facebook-reviews-icon svg{display:block;width:52px;height:52px}
+.facebook-reviews-icon{display:grid;place-items:center;flex:0 0 32px;width:32px;height:32px;color:var(--purple)}
+.facebook-reviews-icon svg{display:block;width:28px;height:28px}
 .facebook-reviews-copy{flex:1 1 310px;min-width:0}
 .facebook-reviews-kicker{margin:0 0 5px;color:var(--purple);font-size:.78rem;letter-spacing:.11em;font-weight:800}
 .facebook-reviews-copy h3{margin:0 0 6px;color:var(--deep-purple);font-size:clamp(1.3rem,2.6vw,1.7rem);line-height:1.25}
